@@ -8,8 +8,11 @@ export function cosineSimilarity(a: number[], b: number[]): number {
   let normB = 0;
 
   for (let i = 0; i < a.length; i++) {
-    const ai = a[i]!;
-    const bi = b[i]!;
+    const ai = a[i];
+    const bi = b[i];
+    if (ai === undefined || bi === undefined) {
+      throw new Error("Vectors must not contain undefined values");
+    }
     dot += ai * bi;
     normA += ai * ai;
     normB += bi * bi;

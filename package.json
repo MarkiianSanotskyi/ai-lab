@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc",
     "dev": "npm run build && node dist/index.js",
-    "rag-demo": "npm run build && node dist/rag-demo.js",
+    "rag-demo": "npm run build && node dist/rag/demo.js",
+    "rag-query": "npm run build && node dist/rag/query.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
